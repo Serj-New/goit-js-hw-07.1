@@ -1,0 +1,10 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+}
+
+.gallery_item {
+  display: inline-block;
+  margin-bottom: 10px;
+}
