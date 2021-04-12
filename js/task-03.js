@@ -19,13 +19,12 @@ const images = [
 const gallery = document.querySelector('#gallery');
 gallery.classList.add('gallery');
 
+let itemImg = '';
+
 const galleryList = images.map(item => {
-    const galleryItem = document.createElement('li');
-    const itemImg = `<img src='${item.url}' alt='${item.alt}'  width=480></img>`;
-    galleryItem.classList.add('gallery_item');
-    galleryItem.insertAdjacentHTML('afterbegin', itemImg);
-    
-    return galleryItem;
+  itemImg = `<li class="gallery_item"><img src='${item.url}' alt='${item.alt}'  width=480></></li>`;
+  return itemImg
 })
 
-gallery.append(...galleryList);
+gallery.insertAdjacentHTML('beforeend', galleryList.join(''))
+
